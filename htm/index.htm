@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Home Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- START NAV -->
+    <nav class="navbar is-info">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <div class="content is-large"><>Smart House Project<></div>
+            </a>
+        </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="#" target="_blank" href="https://twitter.com/intent/tweet?text=get free bulma templates:;url=https://github.com/BulmaTemplates/bulma-templates">
+                                <span class="icon">
+                                    <i class="fa fa-github"></i>
+                                </span>
+                                <span>
+                                    GitHub
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV -->
+    <br>
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <section class="hero is-info welcome is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Hello, Admin.
+                            </h1>
+                            <h2 class="subtitle">
+                                I hope you are having a great day!
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="info-tiles">
+                    <div class="tile is-ancestor has-text-centered">
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">2</p>
+                                <p class="subtitle">Light</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">2</p>
+                                <p class="subtitle">Window</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                              <span style="color:rgb(196, 3, 3)" id="DHTtemp">N/A</span>
+                                <p class="subtitle">Temputure</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                              <span style="color:rgb(196, 3, 3)" id="DHThum">N/A</span>
+                                <p class="subtitle">Humidity</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="card events-card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Light
+                                </p>
+                            </header>
+                            <div class="card-table">
+                                <div class="content">
+                                    <table class="table is-fullwidth is-striped">
+                                        <tbody>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Bedroom</td>
+                                                <td><a class="button is-small is-primary" onclick="led1ON()">ON</a></td>
+                                                <td><a class="button is-small" onclick="led1OFF()">OFF</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Living room</td>
+                                                <td><a class="button is-small is-primary" onclick="led2ON()">ON</a></td>
+                                                <td "><a class="button is-small" onclick="led2OFF()">OFF</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="card events-card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Window
+                                </p>
+                            </header>
+                            <div class="card-table">
+                                <div class="content">
+                                    <table class="table is-fullwidth is-striped">
+                                        <tbody>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Bedroom</td>
+                                                <td class="level-left"><a class="button is-small is-primary" href="#"> Open </a></td>
+                                                <td ><a class="button is-small" href="#"> Half </a></td>
+                                                <td class="level-right"><a class="button is-small is-danger" href="#"> Close </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Living room</td>
+                                                <td class="level-left"><a class="button is-small is-primary" href="#">Open</a></td>
+                                                <td ><a class="button is-small" href="#">Half</a></td>
+                                                <td class="level-right"><a class="button is-small is-danger" href="#">Close</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Smart House Project</strong> by Mehmet TAN <strong>&</strong> Emrehan TOPÇU.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Temp -->
+    <script>
+      setInterval(function()
+      {
+        getTemp();
+      }, 2000);
+
+      function getTemp()
+      {
+        var DHT11Request = new XMLHttpRequest();
+        DHT11Request.onreadystatechange = function()
+        {
+          if(this.readyState == 4 && this.status == 200 && this.responseText != null)
+          {
+            document.getElementById("DHTtemp").innerHTML = this.responseText;
+          }
+        };
+        DHT11Request.open("GET", "readTemp", true);
+        DHT11Request.send();
+      }
+    </script>
+    <!--Hum-->
+    <script>
+      setInterval(function()
+      {
+        getHum();
+      }, 2000);
+
+      function getHum()
+      {
+        var DHT11Request = new XMLHttpRequest();
+        DHT11Request.onreadystatechange = function()
+        {
+          if(this.readyState == 4 && this.status == 200 && this.responseText != null)
+          {
+            document.getElementById("DHThum").innerHTML = this.responseText;
+          }
+        };
+        DHT11Request.open("GET", "readHum", true);
+        DHT11Request.send();
+      }
+    </script>
+
+    <!--Led1-->
+    <script>
+      function led1ON()
+      {
+        var led1 = new XMLHttpRequest();
+        
+        led1.open("POST", "led1ON", true);
+        led1.send();
+      }
+    </script>
+    <!--Led1-->
+
+    <!--Led2-->
+    <script>
+      function led2ON()
+      {
+        var led2 = new XMLHttpRequest();
+        
+        led2.open("POST", "led2ON", true);
+        led2.send();
+      }
+    </script>
+    <!--Led2-->
+
+    <!--Led1-->
+    <script>
+      function led1OFF()
+      {
+        var led1 = new XMLHttpRequest();
+        
+        led1.open("POST", "led1OFF", true);
+        led1.send();
+      }
+    </script>
+    <!--Led1-->
+
+    <!--Led2-->
+    <script>
+      function led2OFF()
+      {
+        var led2 = new XMLHttpRequest();
+        
+        led2.open("POST", "led2OFF", true);
+        led2.send();
+      }
+    </script>
+    <!--Led2-->
+
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+</html>
