@@ -11,10 +11,8 @@ File HMTL_file;
 Servo bedroom;
 Servo livingroom;
 
-int bed = 9;
-int liv = 10;
-int led1 = 31;
-int led2 = 33;
+int led1 = 2;
+int led2 = 3;
 //------------------------------------------------
 byte mac[] = {0x90, 0xA2, 0xDA, 0x00, 0x4A, 0xE0};
 IPAddress ip(192, 168, 1, 177);
@@ -30,8 +28,6 @@ void setup()
   bedroom.attach(9);
   livingroom.attach(10);
   
-  dht.begin();
-  pinMode(53, OUTPUT);
   //-----------------------------------------------------
   Serial.println(F("Initializing SD card..."));
   if(!SD.begin(4))

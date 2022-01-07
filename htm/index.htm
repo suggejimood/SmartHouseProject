@@ -26,7 +26,7 @@
                 <div class="navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
-                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="#" target="_blank" href="https://twitter.com/intent/tweet?text=get free bulma templates:;url=https://github.com/BulmaTemplates/bulma-templates">
+                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="#" target="_blank" href="https://github.com/suggejimood/SmartHouseProject">
                                 <span class="icon">
                                     <i class="fa fa-github"></i>
                                 </span>
@@ -129,16 +129,16 @@
                                             <tr>
                                                 <td width="5%"><i class="fa fa-bell-o"></i></td>
                                                 <td>Bedroom</td>
-                                                <td class="level-left"><a class="button is-small is-primary" href="#"> Open </a></td>
-                                                <td ><a class="button is-small" href="#"> Half </a></td>
-                                                <td class="level-right"><a class="button is-small is-danger" href="#"> Close </a></td>
+                                                <td class="level-left"><a class="button is-small is-primary" onclick="bedroomOpen()"> Open </a></td>
+                                                <td ><a class="button is-small" onclick="bedroomHalf()"> Half </a></td>
+                                                <td class="level-right"><a class="button is-small is-danger"  onclick="bedroomClose()"> Close </a></td>
                                             </tr>
                                             <tr>
                                                 <td width="5%"><i class="fa fa-bell-o"></i></td>
                                                 <td>Living room</td>
-                                                <td class="level-left"><a class="button is-small is-primary" href="#">Open</a></td>
-                                                <td ><a class="button is-small" href="#">Half</a></td>
-                                                <td class="level-right"><a class="button is-small is-danger" href="#">Close</a></td>
+                                                <td class="level-left"><a class="button is-small is-primary" onclick="livingroomOpen()">Open</a></td>
+                                                <td ><a class="button is-small" onclick="livingroomHalf()">Half</a></td>
+                                                <td class="level-right"><a class="button is-small is-danger" onclick="livingroomClose()">Close</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -249,6 +249,78 @@
       }
     </script>
     <!--Led2-->
+
+    <!--beroom Open-->
+    <script>
+        function bedroomOpen()
+        {
+          var bedroom = new XMLHttpRequest();
+          
+          bedroom.open("POST", "bedroomOpen", true);
+          bedroom.send();
+        }
+      </script>
+      <!--bedroom Open-->
+
+      <!--beroom Half-->
+    <script>
+        function bedroomHalf()
+        {
+          var bedroom = new XMLHttpRequest();
+          
+          bedroom.open("POST", "bedroomHalf", true);
+          bedroom.send();
+        }
+      </script>
+      <!--bedroom Half-->
+
+      <!--beroom Close-->
+    <script>
+        function bedroomClose()
+        {
+          var bedroom = new XMLHttpRequest();
+          
+          bedroom.open("POST", "bedroomClose", true);
+          bedroom.send();
+        }
+      </script>
+      <!--bedroom Close-->
+
+      <!--livingroom Open-->
+    <script>
+        function livingroomOpen()
+        {
+          var livingroom = new XMLHttpRequest();
+          
+          livingroom.open("POST", "livingroomOpen", true);
+          livingroom.send();
+        }
+      </script>
+      <!--livingroom Open-->
+
+      <!--livingroom Half-->
+    <script>
+        function livingroomHalf()
+        {
+          var livingroom = new XMLHttpRequest();
+          
+          livingroom.open("POST", "livingroomHalf", true);
+          livingroom.send();
+        }
+      </script>
+      <!--livingroom Half-->
+
+      <!--livingroom Close-->
+    <script>
+        function livingroomClose()
+        {
+          var livingroom = new XMLHttpRequest();
+          
+          livingroom.open("POST", "livingroomClose", true);
+          livingroom.send();
+        }
+      </script>
+      <!--livingroom Close-->
 
     <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
